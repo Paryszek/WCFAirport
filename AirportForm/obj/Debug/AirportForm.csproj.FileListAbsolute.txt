@@ -1,0 +1,13 @@
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\AirportForm.exe.config
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\AirportForm.exe
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\AirportForm.pdb
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\Airport.dll
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\Airport.pdb
+C:\Users\mparysz\Desktop\Airport\AirportForm\bin\Debug\Airport.dll.config
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.csprojResolveAssemblyReference.cache
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.Form1.resources
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.Properties.Resources.resources
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.csproj.GenerateResource.Cache
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.csproj.CoreCompileInputs.cache
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.exe
+C:\Users\mparysz\Desktop\Airport\AirportForm\obj\Debug\AirportForm.pdb
