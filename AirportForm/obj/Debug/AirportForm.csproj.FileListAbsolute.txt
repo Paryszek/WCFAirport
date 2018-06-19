@@ -24,3 +24,14 @@ C:\Users\mparysz\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.csproj.Gen
 C:\Users\mparysz\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.csproj.CoreCompileInputs.cache
 C:\Users\mparysz\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.exe
 C:\Users\mparysz\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.pdb
+C:\Users\parys\Desktop\WCFAirport\AirportForm\bin\Debug\AirportForm.exe.config
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.exe
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.pdb
+C:\Users\parys\Desktop\WCFAirport\AirportForm\bin\Debug\Airport.dll
+C:\Users\parys\Desktop\WCFAirport\AirportForm\bin\Debug\Airport.pdb
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.csprojResolveAssemblyReference.cache
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.Form1.resources
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.Properties.Resources.resources
+C:\Users\parys\Desktop\WCFAirport\AirportForm\obj\Debug\AirportForm.csproj.GenerateResource.Cache
+C:\Users\parys\Desktop\WCFAirport\AirportForm\bin\Debug\AirportForm.exe
+C:\Users\parys\Desktop\WCFAirport\AirportForm\bin\Debug\AirportForm.pdb

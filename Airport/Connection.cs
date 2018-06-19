@@ -22,7 +22,7 @@ namespace Airport
 
         public override string ToString()
         {
-            return "From: " + From + " to " + To + " " + Departure + "-" + Arrival;
+            return "From: " + From + " to " + To + " " + Departure.TimeOfDay + "-" + Arrival.TimeOfDay;
         }
     }
 }
