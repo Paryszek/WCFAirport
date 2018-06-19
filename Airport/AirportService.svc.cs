@@ -24,13 +24,25 @@ namespace Airport
         public string GetConnectionBetween(string airportA, string airportB)
         {
             List<Connection> connections = new List<Connection>();
+            List<Connection> indirectConnections = new List<Connection>();
             foreach (var connection in airportBase.Connections)
             {
                 if (connection.From.ToLower().Equals(airportA.ToLower()) && connection.To.ToLower().Equals(airportB.ToLower())) {
                     connections.Add(connection);
                 }
+                foreach (var _connection in airportBase.Connections)
+                {
+                    if (!_connection.From.ToLower().Equals(airportA) && !_connection.From.ToLower().Equals(airportB) && _connection.To.ToLower().Equals(airportB))
+                    {
+                        if(connection.To.Equals(_connection.From))
+                        {
+                            indirectConnections.Add(_connection);
+                        }
+                    }
+                }
             }
-            return ListAsStringsOfConnections(connections);
+            
+            return ListAsStringsOfConnections(connections) + Environment.NewLine + Environment.NewLine + ListAsStringsOfConnections(indirectConnections);
         }
 
         private string ListAsStringsOfConnections(List<Connection> connections)
