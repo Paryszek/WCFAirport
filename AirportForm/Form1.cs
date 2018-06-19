@@ -22,13 +22,23 @@ namespace AirportForm
 
         private void accept_Click(object sender, EventArgs e)
         {
-            if (airportA.Text.Equals("") || airportB.Text.Equals(""))
+            if (airportA.Text.Length == 0 || airportB.Text.Length == 0 || dateTimePicker.Text.Length == 0 || time.Text.Length == 0)
             {
                 connections.Text = service.GetEveryConnection();
-            } else if (airportA.Text.Length > 0 && airportB.Text.Length > 0)
+            } else if (airportA.Text.Length > 0 && airportB.Text.Length > 0 && dateTimePicker.Text.Length > 0 && time.Text.Length > 0 && time.Text.Contains(":"))
             {
-                connections.Text = service.GetConnectionBetween(airportA.Text, airportB.Text);
+                connections.Text = service.GetConnectionBetween(airportA.Text.ToLower(), airportB.Text.ToLower(), CreateDateFromStringAndTime(dateTimePicker.Value.ToShortDateString(), time.Text));
             } 
         }
+
+        private DateTime CreateDateFromStringAndTime(string d, string t)
+        {
+            var data = t.Split(':');
+            DateTime dt = DateTime.Parse(d);
+            TimeSpan ts = new TimeSpan(Int32.Parse(data[0]), Int32.Parse(data[1]), 0);
+            dt = dt.Date + ts;
+            return dt;
+        }
+
     }
 }

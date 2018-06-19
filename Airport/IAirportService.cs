@@ -15,6 +15,6 @@ namespace Airport
         string GetEveryConnection();
 
         [OperationContract(Name = "getConnectionBetween")]
-        string GetConnectionBetween(string airportA, string airportB);
+        string GetConnectionBetween(string airportA, string airportB, DateTime time);
     }
 }

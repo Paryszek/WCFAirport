@@ -21,28 +21,27 @@ namespace Airport
             return ListAsStringsOfConnections(airportBase.Connections);
         }
 
-        public string GetConnectionBetween(string airportA, string airportB)
+        public string GetConnectionBetween(string airportA, string airportB, DateTime from)
         {
             List<Connection> connections = new List<Connection>();
             List<Connection> indirectConnections = new List<Connection>();
             foreach (var connection in airportBase.Connections)
             {
-                if (connection.From.ToLower().Equals(airportA.ToLower()) && connection.To.ToLower().Equals(airportB.ToLower())) {
-                    connections.Add(connection);
-                }
-                foreach (var _connection in airportBase.Connections)
+                if (DateTime.Compare(from, connection.Departure) <= 0)
                 {
-                    if (!_connection.From.ToLower().Equals(airportA) && !_connection.From.ToLower().Equals(airportB) && _connection.To.ToLower().Equals(airportB))
+                    if (connection.From.ToLower().Equals(airportA) && connection.To.ToLower().Equals(airportB))
                     {
-                        if(connection.To.Equals(_connection.From))
-                        {
-                            indirectConnections.Add(_connection);
-                        }
+                        connections.Add(connection);
+                    } else 
+                    if (connection.To.ToLower().Equals(airportB))
+                    {
+                        indirectConnections.Add(connection);
                     }
                 }
+                
             }
             
-            return ListAsStringsOfConnections(connections) + Environment.NewLine + Environment.NewLine + ListAsStringsOfConnections(indirectConnections);
+            return ListAsStringsOfConnections(connections) + Environment.NewLine + "Indirect connections" + Environment.NewLine  + ListAsStringsOfConnections(indirectConnections);
         }
 
         private string ListAsStringsOfConnections(List<Connection> connections)

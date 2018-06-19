@@ -44,8 +44,17 @@ namespace Airport
             Connections = new List<Connection>();
             for (var i = 0; i < FromCityList.LongCount(); i++)
             {
-                Connections.Add(new Connection(FromCityList.ElementAt(i), ToCityList.ElementAt(i), DepartureTimeList.ElementAt(i), ArrivalTimeList.ElementAt(i)));
+                Connections.Add(new Connection(FromCityList.ElementAt(i), ToCityList.ElementAt(i), CreateDateFromString(DepartureTimeList.ElementAt(i)), CreateDateFromString(ArrivalTimeList.ElementAt(i))));
             }
+        }
+
+        private DateTime CreateDateFromString(string v)
+        {
+            var data = v.Split(':');
+            DateTime dt = DateTime.Today;
+            TimeSpan ts = new TimeSpan(Int32.Parse(data[0]), Int32.Parse(data[1]), 0);
+            dt = dt.Date + ts;
+            return dt;
         }
     }
 }
