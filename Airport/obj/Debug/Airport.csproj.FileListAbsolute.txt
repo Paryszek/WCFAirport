@@ -5,3 +5,10 @@ C:\Users\mparysz\Desktop\Airport\Airport\obj\Debug\Airport.csprojResolveAssembly
 C:\Users\mparysz\Desktop\Airport\Airport\obj\Debug\Airport.csproj.CoreCompileInputs.cache
 C:\Users\mparysz\Desktop\Airport\Airport\obj\Debug\Airport.dll
 C:\Users\mparysz\Desktop\Airport\Airport\obj\Debug\Airport.pdb
+C:\Users\mparysz\Desktop\WCFAirport\Airport\bin\Airport.dll.config
+C:\Users\mparysz\Desktop\WCFAirport\Airport\bin\Airport.dll
+C:\Users\mparysz\Desktop\WCFAirport\Airport\bin\Airport.pdb
+C:\Users\mparysz\Desktop\WCFAirport\Airport\obj\Debug\Airport.csprojResolveAssemblyReference.cache
+C:\Users\mparysz\Desktop\WCFAirport\Airport\obj\Debug\Airport.csproj.CoreCompileInputs.cache
+C:\Users\mparysz\Desktop\WCFAirport\Airport\obj\Debug\Airport.dll
+C:\Users\mparysz\Desktop\WCFAirport\Airport\obj\Debug\Airport.pdb

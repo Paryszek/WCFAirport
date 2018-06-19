@@ -18,8 +18,25 @@ namespace Airport
 
         public string GetEveryConnection()
         {
+            return ListAsStringsOfConnections(airportBase.Connections);
+        }
+
+        public string GetConnectionBetween(string airportA, string airportB)
+        {
+            List<Connection> connections = new List<Connection>();
+            foreach (var connection in airportBase.Connections)
+            {
+                if (connection.From.ToLower().Equals(airportA.ToLower()) && connection.To.ToLower().Equals(airportB.ToLower())) {
+                    connections.Add(connection);
+                }
+            }
+            return ListAsStringsOfConnections(connections);
+        }
+
+        private string ListAsStringsOfConnections(List<Connection> connections)
+        {
             string connectionsToReturn = "";
-            foreach(var connection in airportBase.Connections)
+            foreach (var connection in connections)
             {
                 connectionsToReturn += connection.ToString() + Environment.NewLine;
             }

@@ -13,5 +13,8 @@ namespace Airport
     {
         [OperationContract(Name = "getEveryConnection")]
         string GetEveryConnection();
+
+        [OperationContract(Name = "getConnectionBetween")]
+        string GetConnectionBetween(string airportA, string airportB);
     }
 }

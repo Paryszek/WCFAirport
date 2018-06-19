@@ -22,10 +22,13 @@ namespace AirportForm
 
         private void accept_Click(object sender, EventArgs e)
         {
-            if(airportA.Text.Equals("") && airportB.Text.Equals(""))
+            if (airportA.Text.Equals("") || airportB.Text.Equals(""))
             {
                 connections.Text = service.GetEveryConnection();
-            }
+            } else if (airportA.Text.Length > 0 && airportB.Text.Length > 0)
+            {
+                connections.Text = service.GetConnectionBetween(airportA.Text, airportB.Text);
+            } 
         }
     }
 }
