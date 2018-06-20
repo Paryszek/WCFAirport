@@ -28,7 +28,9 @@ namespace AirportForm
             } else if (airportA.Text.Length > 0 && airportB.Text.Length > 0 && dateTimePicker.Text.Length > 0 && time.Text.Length > 0 && time.Text.Contains(":"))
             {
                 connections.Text = service.GetConnectionBetween(airportA.Text.ToLower(), airportB.Text.ToLower(), CreateDateFromStringAndTime(dateTimePicker.Value.ToShortDateString(), time.Text));
-            } 
+            } else {
+                throw new WrongUserInput();
+            }
         }
 
         private DateTime CreateDateFromStringAndTime(string d, string t)
@@ -40,5 +42,13 @@ namespace AirportForm
             return dt;
         }
 
+    }
+
+    public class WrongUserInput : Exception {
+        public override string ToString() {
+            return Message;
+        }
+
+        public override string Message => "The form got wrong imputs";
     }
 }

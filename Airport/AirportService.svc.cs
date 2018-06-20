@@ -18,11 +18,18 @@ namespace Airport
 
         public string GetEveryConnection()
         {
+            if(airportBase.Connections.Count == 0) {
+                return "There is problem to get connections from the service";
+                throw new EmptyConnectionsList();
+            }
             return ListAsStringsOfConnections(airportBase.Connections);
         }
 
         public string GetConnectionBetween(string airportA, string airportB, DateTime from)
         {
+            if (airportA.Length == 0 || airportB.Length == 0 || !from.Date.Equals(DateTime.Today)) {
+                throw new WrongUserInput();
+            }
             List<Connection> connections = new List<Connection>();
             List<Connection> toDirectionConnections = new List<Connection>();
             List<Connection> indirectConnections = new List<Connection>();
@@ -54,8 +61,11 @@ namespace Airport
                     }
                 }
             }
-            
-            return ListAsStringsOfConnections(connections) + Environment.NewLine + "Indirect connections" + Environment.NewLine  + indirectConnectionsList;
+            if (connections.Count == 0 && indirectConnections.Count == 0) {
+                return "Cities without connections " + airportA + " - " + airportB;
+                throw new EmptyConnectionsList();
+            }
+            return ListAsStringsOfConnections(connections) + Environment.NewLine + "Indirect connections" + Environment.NewLine + indirectConnectionsList;
         }
 
         private string ListAsStringsOfConnections(List<Connection> connections)
@@ -68,4 +78,20 @@ namespace Airport
             return connectionsToReturn;
         }
     }
+    public class EmptyConnectionsList : Exception {
+        public override string ToString() {
+            return Message;
+        }
+
+        public override string Message => "The list is empty";
+    }
+
+    public class WrongUserInput : Exception {
+        public override string ToString() {
+            return Message;
+        }
+
+        public override string Message => "The form got wrong imputs";
+    }
 }
+
